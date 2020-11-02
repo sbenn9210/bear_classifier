@@ -16,12 +16,12 @@ def main():
 
     learn = learner(path)
     uploaded_file = st.file_uploader('Choose a image file', type=['png', "jpeg", "jpg"])
-    print(uploaded_file)
     if uploaded_file is not None:
         st.image(uploaded_file.read(), width=300)
         our_image = PILImage.create(uploaded_file)
-        pred = learn.predict(our_image)[0]
+        pred,pred_idx,probs = learn.predict(our_image)
         st.success(pred + " bear")
+        st.write("Prediction: ", pred, "; Probability: ", probs[pred_idx]*100)
 
         
 
