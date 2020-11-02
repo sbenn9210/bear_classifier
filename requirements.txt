@@ -1,4 +1,5 @@
 fastai==2.1.2 
 streamlit==0.70.0
 pathlib2==2.3.5
-https://download.pytorch.org/whl/cpu/torch-1.6.0%2Bcpu-cp36-cp36m-linux_x86_64.whl 
+-f https://download.pytorch.org/whl/torch_stable.html                                                                                                                                                             
+torch==1.6.0+cpu
